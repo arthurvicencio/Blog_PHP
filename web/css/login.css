@@ -11,6 +11,9 @@
     padding: 20px;
     width: 800px;
 }
+#content-login {
+    min-height: 700px;
+}
 #header-login {
     color: #fff;
 }
