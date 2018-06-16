@@ -40,11 +40,14 @@ Yii::$app->name = 'Simple Blog Node';
     <link rel="stylesheet" href="/css/common/jquery-ui.css">
     <link rel="stylesheet" href="/css/common.css">
 
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/login.css">
+
 </head>
 <body class="stretched side-header">
 <?php $this->beginBody() ?>
 
-<?php echo $content ?>
+<?= $content ?>
 
 <?php $this->endBody() ?>
 

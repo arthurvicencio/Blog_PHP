@@ -87,8 +87,36 @@ class PagesController extends Controller
      */
     public function actionProfile()
     {
+        $aListOfBloggers = [
+            [
+                'name' => 'Kurl Managat',
+                'position_label' => 'Blogger (Professional)',
+                'description' => 'This is a sample text just to fill this sample content all over again.  This is a sample text just to fill this sample content all over again....'
+            ],
+            [
+                'name' => 'Damien Watchen',
+                'position_label' => 'Accountant (Professional)',
+                'description' => 'This is a sample text just to fill this sample content all over again.  This is a sample text just to fill this sample content all over again....'
+            ],
+            [
+                'name' => 'Wilson Palomona',
+                'position_label' => 'Blogger (Working Student)',
+                'description' => 'This is a sample text just to fill this sample content all over again.  This is a sample text just to fill this sample content all over again....'
+            ],
+            [
+                'name' => 'Arthur Vicencio',
+                'position_label' => 'Developer (Professional)',
+                'description' => 'This is a sample text just to fill this sample content all over again.  This is a sample text just to fill this sample content all over again....'
+            ]
+        ];
+
+        $aAssignViewData = [
+            'sSelectedMenuItem' => '',
+            'aListOfBloggers' => $aListOfBloggers
+        ];
+
         $this->layout = 'default';
-        return $this->render('profile');
+        return $this->render('profile', $aAssignViewData);
     }
 
     /**
