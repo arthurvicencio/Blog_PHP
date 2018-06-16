@@ -10,7 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
-class SiteController extends Controller
+class OriginalSiteController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -123,6 +123,6 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about');
+//        return $this->render('about');
     }
 }

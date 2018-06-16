@@ -1,0 +1,27 @@
+body {
+    background : #fff;
+    height: 1500px;
+}
+.cont-error {
+    height: 100vh;
+}
+.cont-error .row {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.cont-error p {
+    color: #000;
+}
+.cont-error .title {
+    font-size: 25px;
+}
+.cont-error .wrapper a {
+    color: #4C1111;
+    text-decoration: none;
+}
+.cont-error .wrapper a:hover,
+.cont-error .wrapper a:focus {
+    text-decoration: underline;
+}

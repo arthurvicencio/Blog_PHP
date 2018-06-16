@@ -1,0 +1,91 @@
+body {
+    min-height: 100%;
+    position : static;
+    padding: 0 0 30px;
+}
+ul {
+    list-style: none;
+}
+.display-flex {
+    display: flex;
+    justify-content: center;
+}
+#header-navbar .navbar-nav {
+    display: inline-block;
+    clear: both;
+}
+#header #cont-home-title {
+    padding: 0 !important;
+}
+#cont-home-title > a {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 15px 0 0;
+}
+.content-wrap {
+    padding: 60px 20px;
+}
+#other-avail-options .menu-item {
+    display: inline-block;
+}
+#other-avail-options .menu-item a:hover,
+#other-avail-options .menu-item a:focus {
+    opacity: 0.6;
+    color : #1ABC9C;
+}
+#other-avail-options .current.menu-item a {
+    color: #1ABC9C;
+    font-weight: bold;
+    border-bottom: 1px solid #d3d3d3;
+    padding-bottom: 10px;
+}
+#other-avail-options .menu-item::after {
+    content: "|";
+    margin: 0 5px;
+    color: #d3d3d3;
+}
+#other-avail-options .menu-item:last-child::after {
+    display: none;
+}
+.header-title {
+    color: #444;
+    margin-bottom: 5px;
+}
+
+/* Slideshow */
+.simple-slideshow {
+    position: relative;
+    text-align: center;
+    height: 400px;
+}
+.simple-slideshow .slide {
+    position: absolute;
+    top: 0;
+    opacity : 0;
+    width: 100%;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition : all 0.5s linear;
+}
+.simple-slideshow .slide img {
+    width: 500px;
+}
+.simple-slideshow .slide.active {
+    opacity : 1;
+}
+/* End : Slideshow */
+
+#footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    position: absolute;
+}
+#footer .developers li {
+    display: inline-block;
+    margin-right: 5px;
+}
+#copyrights {
+    padding: 50px;
+}

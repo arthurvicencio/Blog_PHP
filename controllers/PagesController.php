@@ -10,6 +10,13 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
+/**
+ * Class PagesController
+ * @package app\controllers
+ * @author Marylyn Lajato <eeyaotajal@gmail,com>
+ * @version 1.0
+ * @since June 16, 2018
+ */
 class PagesController extends Controller
 {
     /**
@@ -56,18 +63,57 @@ class PagesController extends Controller
 
     /**
      * Displays homepage.
-     *
      * @return string
      */
     public function actionIndex()
     {
+        $this->layout = 'default';
         return $this->render('index');
     }
 
     /**
+     * Displays about page.
+     * @return string
+     */
+    public function actionAbout()
+    {
+        $this->layout = 'default';
+        return $this->render('about');
+    }
+
+    /**
+     * Displays profile index page.
+     * @return string
+     */
+    public function actionProfile()
+    {
+        $this->layout = 'default';
+        return $this->render('profile');
+    }
+
+    /**
+     * Displays FAQ page.
+     * @return string
+     */
+    public function actionFaq()
+    {
+        $this->layout = 'default';
+        return $this->render('faq');
+    }
+
+    /**
+     * Displays Contact Us Page.
+     * @return string
+     */
+    public function actionContactUs()
+    {
+        $this->layout = 'default';
+        return $this->render('contact-us');
+    }
+
+    /**
      * Login action.
-     *
-     * @return Response|string
+     * @return string|Response
      */
     public function actionLogin()
     {
@@ -88,7 +134,6 @@ class PagesController extends Controller
 
     /**
      * Logout action.
-     *
      * @return Response
      */
     public function actionLogout()
@@ -100,8 +145,7 @@ class PagesController extends Controller
 
     /**
      * Displays contact page.
-     *
-     * @return Response|string
+     * @return string|Response
      */
     public function actionContact()
     {
@@ -116,21 +160,13 @@ class PagesController extends Controller
         ]);
     }
 
+    /**
+     * Override view path location
+     * @return bool|string
+     */
     public function getViewPath()
     {
         return Yii::getAlias('@app/views/site');
     }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
-
-
 }
 

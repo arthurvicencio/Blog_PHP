@@ -1,0 +1,54 @@
+#content-profile .list {
+    min-height: 500px;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+}
+#content-profile .header-title {
+    border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 15px;
+}
+.blogger-item {
+    padding-bottom: 50px;
+}
+.heading-block {
+    margin-bottom: 20px;
+}
+.heading-block h3 {
+    font-size: 26px;
+}
+.blogger-item .col-padding.image {
+    height: 707px;
+}
+.blogger-item .col-padding.col-desc {
+    height: 707px;
+    background-color: rgb(245, 245, 245);
+}
+.read-more-link {
+    background: #1ABC9C;
+    color: #fff;
+    padding: 10px 15px;
+}
+.read-more-link:hover,
+.read-more-link:focus {
+    opacity: 0.8;
+    color: #fff;
+}
+
+/* Profile : Info */
+#content-profile-blogger .information .item {
+    display: flex;
+    align-items : center;
+    margin-bottom: 15px;
+}
+#content-profile-blogger h3,
+#content-profile-blogger p {
+    margin: 0;
+}
+#content-profile-blogger h3 {
+    font-size: 20px;
+    width: 250px;
+}
+#content-profile-blogger .list-of-blogs .item {
+    margin-bottom: 10px;
+}

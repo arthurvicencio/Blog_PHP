@@ -50,6 +50,7 @@ $config = [
             // Disable r= routes
             'enablePrettyUrl' => true,
             'rules' => [
+                '/' => 'pages/index',
                 '<alias:\w+>' => 'pages/<alias>',
             ],
         ],

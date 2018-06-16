@@ -1,53 +1,42 @@
-<?php
+<?php ?>
 
-/* @var $this yii\web\View */
+<div id="wrapper" class="clearfix">
 
-$this->title = 'My Yii Application';
-?>
-<div class="site-index">
+    <?php echo \Yii::$app->view->render('@app/views/includes/header.php'); ?>
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+    <!-- Section -->
+    <section id="content">
+        <div class="content-wrap main-content">
+            <!-- Home Page Content -->
+            <div id="content-home">
+                <div class="simple-slideshow">
+                    <ul>
+                        <li class="slide active"><img src="images/blog1.jpeg" /></li>
+                        <li class="slide"><img src="images/blog2.jpeg" /></li>
+                        <li class="slide"><img src="images/blog3.jpeg" /></li>
+                        <li class="slide"><img src="images/full/3.jpg" /></li>
+                    </ul>
+                </div>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+                <div class="wrapper" id="home-intro">
+                    <h2 class="header-title"> Sample Main Initial Title </h2>
+                    <p>
+                        Sample Main Initial Description
+                    </p>
+                </div>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                <div class="wrapper" id="sub-intro">
+                    <h3> Blog Node Template Mini Project </h3>
+                    <p> This is just a sample content fill in text. Provide the necessary details below </p>
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
+            <!-- End : Home Page Content -->
         </div>
+    </section>
+    <!-- End : Section -->
 
-    </div>
+    <?php echo \Yii::$app->view->render('@app/views/includes/footer.php'); ?>
+    <script type="text/javascript" src="js/index.js"></script>
+
 </div>

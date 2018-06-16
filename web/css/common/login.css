@@ -1,0 +1,24 @@
+#app {
+    background: #1ABC9C;
+    height: 100vh;
+}
+#app .row {
+    height: 100%;
+    margin-top: 100px;
+}
+#app .panel {
+    background: #777;
+    border: 0;
+    color: #fff;
+}
+#app .panel-heading {
+    background: #777;
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+#app .btn-primary {
+    background: #1ABC9C;
+    border: 0;
+}
