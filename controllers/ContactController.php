@@ -67,8 +67,13 @@ class ContactController extends Controller
      */
     public function actionIndex()
     {
+        $aAssignData = [
+            'sSelectedMenuItem' => 'contact-us'
+        ];
+
+
         $this->layout = 'default';
-        return $this->render('contact-us');
+        return $this->render('contact-us', $aAssignData);
     }
 
     /**
@@ -77,8 +82,12 @@ class ContactController extends Controller
      */
     public function actionView()
     {
+        $aAssignData = [
+            'sSelectedMenuItem' => 'contact-us'
+        ];
+
         $this->layout = 'default';
-        return $this->render('contact-us');
+        return $this->render('contact-us', $aAssignData);
     }
 
     /**

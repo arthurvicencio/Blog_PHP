@@ -67,8 +67,12 @@ class FaqController extends Controller
      */
     public function actionIndex()
     {
+        $aAssignData = [
+            'sSelectedMenuItem' => 'faq'
+        ];
+
         $this->layout = 'default';
-        return $this->render('faq');
+        return $this->render('faq', $aAssignData);
     }
 
     /**
@@ -77,8 +81,13 @@ class FaqController extends Controller
      */
     public function actionView()
     {
+        $aAssignData = [
+            'sSelectedMenuItem' => 'faq'
+        ];
+
+
         $this->layout = 'default';
-        return $this->render('faq');
+        return $this->render('faq', $aAssignData);
     }
 
     /**

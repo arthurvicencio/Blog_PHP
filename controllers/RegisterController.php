@@ -67,8 +67,12 @@ class RegisterController extends Controller
      */
     public function actionIndex()
     {
+        $aAssignData = [
+            'sSelectedMenuItem' => 'register-account'
+        ];
+
         $this->layout = 'default';
-        return $this->render('register-account');
+        return $this->render('register-account', $aAssignData);
     }
 
     /**

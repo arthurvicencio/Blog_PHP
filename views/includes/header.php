@@ -8,25 +8,25 @@
 
             <nav id="primary-menu">
                 <ul>
-                    <li class="menu-item current>">
+                    <li class="menu-item <?php echo ($sSelectedMenuItem === '/') ? 'current' : '' ?>">
                         <a href="/">
                             <div>Home</div>
                         </a>
                     </li>
 
-                    <li class="menu-item">
+                    <li class="menu-item <?php echo ($sSelectedMenuItem === 'profile') ? 'current' : '' ?>">
                         <a href="/profile">
                             <div>Profile</div>
                         </a>
                     </li>
 
-                    <li class="menu-item">
+                    <li class="menu-item <?php echo ($sSelectedMenuItem === 'faq') ? 'current' : '' ?>">
                         <a href="/faq">
                             <div>FAQ</div>
                         </a>
                     </li>
 
-                    <li class="menu-item">
+                    <li class="menu-item <?php echo ($sSelectedMenuItem === 'contact-us') ? 'current' : '' ?>">
                         <a href="/contact">
                             <div>Contact Us</div>
                         </a>
@@ -38,10 +38,10 @@
             <div id="other-avail-options">
                 <h5> Other Options </h5>
                 <ul class="other-menus">
-                    <li class="menu-item">
+                    <li class="menu-item <?php echo ($sSelectedMenuItem === 'login-account') ? 'current' : '' ?>">
                         <a href="/login">Login</a>
                     </li>
-                    <li class="menu-item">
+                    <li class="menu-item <?php echo ($sSelectedMenuItem === 'register-account') ? 'current' : '' ?>">
                         <a href="/register">Register</a>
                     </li>
                 </ul>

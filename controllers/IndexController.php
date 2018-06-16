@@ -19,7 +19,6 @@ use app\models\ContactForm;
  */
 class IndexController extends Controller
 {
-
     /**
      * {@inheritdoc}
      */
@@ -69,7 +68,11 @@ class IndexController extends Controller
     public function actionIndex()
     {
         $this->layout = 'default';
-        return $this->render('index');
+        $aAssignData = [
+            'sSelectedMenuItem' => '/'
+        ];
+
+        return $this->render('index', $aAssignData);
     }
 
     /**

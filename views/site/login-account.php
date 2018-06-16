@@ -2,7 +2,7 @@
 
 <div id="wrapper" class="clearfix">
 
-    <?php echo \Yii::$app->view->render('@app/views/includes/header.php'); ?>
+    <?php echo \Yii::$app->view->render('@app/views/includes/header.php', ['sSelectedMenuItem' => $sSelectedMenuItem]); ?>
 
     <!-- Section -->
     <section id="content">

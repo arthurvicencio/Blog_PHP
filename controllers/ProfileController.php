@@ -91,7 +91,7 @@ class ProfileController extends Controller
         ];
 
         $aAssignViewData = [
-            'sSelectedMenuItem' => '',
+            'sSelectedMenuItem' => 'profile',
             'aListOfBloggers' => $aListOfBloggers
         ];
 
@@ -106,12 +106,13 @@ class ProfileController extends Controller
     public function actionView()
     {
         $sBloggerName = Yii::$app->getRequest()->getQueryParam('name');
-        $aAssignData = [
+        $aAssignViewData = [
+            'sSelectedMenuItem' => 'profile',
             'sBloggerName' => $sBloggerName
         ];
 
         $this->layout = 'default';
-        return $this->render('profile/view', $aAssignData);
+        return $this->render('profile/view', $aAssignViewData);
     }
 
     /**

@@ -67,8 +67,12 @@ class LoginController extends Controller
      */
     public function actionIndex()
     {
+        $aAssignData = [
+            'sSelectedMenuItem' => 'login-account'
+        ];
+
         $this->layout = 'default';
-        return $this->render('login-account');
+        return $this->render('login-account', $aAssignData);
     }
 
     /**
