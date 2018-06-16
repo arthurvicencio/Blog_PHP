@@ -10,6 +10,7 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        '@controller_pages' => '@app/controllers/Pages',
     ],
     'components' => [
         'request' => [
@@ -50,8 +51,10 @@ $config = [
             // Disable r= routes
             'enablePrettyUrl' => true,
             'rules' => [
-                '/' => 'pages/index',
-                '<alias:\w+>' => 'pages/<alias>',
+                '/' => 'index',
+//                '<alias:\w+>' => 'pages/<alias>',
+                '<controller:\w+>/<action:\w+>/<name:[\w\s]+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ],
         ],
     ],

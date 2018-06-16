@@ -11,15 +11,14 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 
 /**
- * Class PagesController
+ * Class PagesProfileController
  * @package app\controllers
  * @author Marylyn Lajato <eeyaotajal@gmail,com>
  * @version 1.0
  * @since June 16, 2018
  */
-class PagesController extends Controller
+class ProfileController extends Controller
 {
-
     /**
      * {@inheritdoc}
      */
@@ -63,30 +62,10 @@ class PagesController extends Controller
     }
 
     /**
-     * Displays homepage.
+     * Displays profile index page
      * @return string
      */
     public function actionIndex()
-    {
-        $this->layout = 'default';
-        return $this->render('index');
-    }
-
-    /**
-     * Displays about page.
-     * @return string
-     */
-    public function actionAbout()
-    {
-        $this->layout = 'default';
-        return $this->render('about');
-    }
-
-    /**
-     * Displays profile index page.
-     * @return string
-     */
-    public function actionProfile()
     {
         $aListOfBloggers = [
             [
@@ -121,72 +100,18 @@ class PagesController extends Controller
     }
 
     /**
-     * Displays FAQ page.
+     * Display specific profile info
      * @return string
      */
-    public function actionFaq()
+    public function actionView()
     {
+        $sBloggerName = Yii::$app->getRequest()->getQueryParam('name');
+        $aAssignData = [
+            'sBloggerName' => $sBloggerName
+        ];
+
         $this->layout = 'default';
-        return $this->render('faq');
-    }
-
-    /**
-     * Displays Contact Us Page.
-     * @return string
-     */
-    public function actionContactUs()
-    {
-        $this->layout = 'default';
-        return $this->render('contact-us');
-    }
-
-    /**
-     * Login action.
-     * @return string|Response
-     */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-
-        $model->password = '';
-        return $this->render('login', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Logout action.
-     * @return Response
-     */
-    public function actionLogout()
-    {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
-    }
-
-    /**
-     * Displays contact page.
-     * @return string|Response
-     */
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
+        return $this->render('profile/view', $aAssignData);
     }
 
     /**

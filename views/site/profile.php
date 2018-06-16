@@ -40,7 +40,7 @@
                                                 <?php echo $mValues['description']; ?>
                                             </p>
 
-                                            <a class="read-more-link" href="profile/<?php echo $mValues['name']; ?>"> View Blogger's Profile Info </a>
+                                            <a class="read-more-link" href="profile/view/<?php echo $mValues['name']; ?>"> View Blogger's Profile Info </a>
                                         </div>
                                     </div>
                                 </div>

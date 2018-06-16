@@ -17,7 +17,7 @@ use app\models\ContactForm;
  * @version 1.0
  * @since June 16, 2018
  */
-class PagesController extends Controller
+class PagesIndexController extends Controller
 {
 
     /**
@@ -68,6 +68,7 @@ class PagesController extends Controller
      */
     public function actionIndex()
     {
+        var_dump('here1'); exit;
         $this->layout = 'default';
         return $this->render('index');
     }
