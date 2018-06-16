@@ -11,7 +11,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 
 /**
- * Class PagesProfileController
+ * Class ProfileController
  * @package app\controllers
  * @author Marylyn Lajato <eeyaotajal@gmail,com>
  * @version 1.0

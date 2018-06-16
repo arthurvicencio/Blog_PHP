@@ -10,7 +10,14 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
-class OriginalSiteController extends Controller
+/**
+ * Class FaqController
+ * @package app\controllers
+ * @author Marylyn Lajato <eeyaotajal@gmail,com>
+ * @version 1.0
+ * @since June 16, 2018
+ */
+class FaqController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -55,74 +62,32 @@ class OriginalSiteController extends Controller
     }
 
     /**
-     * Displays homepage.
-     *
+     * Displays profile index page
      * @return string
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $this->layout = 'default';
+        return $this->render('faq');
     }
 
     /**
-     * Login action.
-     *
-     * @return Response|string
-     */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-
-        $model->password = '';
-        return $this->render('login', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Logout action.
-     *
-     * @return Response
-     */
-    public function actionLogout()
-    {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
-    }
-
-    /**
-     * Displays contact page.
-     *
-     * @return Response|string
-     */
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Displays about page.
-     *
+     * Display specific profile info
      * @return string
      */
-    public function actionAbout()
+    public function actionView()
     {
-//        return $this->render('about');
+        $this->layout = 'default';
+        return $this->render('faq');
+    }
+
+    /**
+     * Override view path location
+     * @return bool|string
+     */
+    public function getViewPath()
+    {
+        return Yii::getAlias('@app/views/site');
     }
 }
+

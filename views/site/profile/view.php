@@ -6,7 +6,7 @@
 
     <!-- Section -->
     <section id="content">
-        <div class="content-wrap" class="main-content">
+        <div class="content-wrap main-content">
             <!-- Profile Blogger Page Content -->
             <div id="content-profile-blogger">
                 <h2> Profile Information </h2>

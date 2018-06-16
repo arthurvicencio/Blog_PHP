@@ -27,7 +27,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="/contact-us">
+                        <a href="/contact">
                             <div>Contact Us</div>
                         </a>
                     </li>

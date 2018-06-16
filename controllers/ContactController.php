@@ -11,15 +11,14 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 
 /**
- * Class IndexController
+ * Class ContactController
  * @package app\controllers
  * @author Marylyn Lajato <eeyaotajal@gmail,com>
  * @version 1.0
  * @since June 16, 2018
  */
-class IndexController extends Controller
+class ContactController extends Controller
 {
-
     /**
      * {@inheritdoc}
      */
@@ -63,13 +62,23 @@ class IndexController extends Controller
     }
 
     /**
-     * Displays homepage.
+     * Displays profile index page
      * @return string
      */
     public function actionIndex()
     {
         $this->layout = 'default';
-        return $this->render('index');
+        return $this->render('contact-us');
+    }
+
+    /**
+     * Display specific profile info
+     * @return string
+     */
+    public function actionView()
+    {
+        $this->layout = 'default';
+        return $this->render('contact-us');
     }
 
     /**

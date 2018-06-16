@@ -7,8 +7,8 @@
     <!-- Section -->
     <section id="content">
         <div class="content-wrap main-content">
-            <!-- FAQ Page Content -->
-            <div id="content-faq">
+            <!-- Home Page Content -->
+            <div id="content-contact-us">
                 <div class="simple-slideshow">
                     <ul>
                         <li class="slide active"><img src="images/blog1.jpeg" /></li>
@@ -18,20 +18,16 @@
                     </ul>
                 </div>
 
-                <div class="wrapper" id="faq-intro">
-                    <h2 class="header-title"> FAQ Page </h2>
+                <div class="wrapper" id="contact-us-intro">
+                    <h2 class="header-title"> Contact Us </h2>
                     <p>
-                        Insert a sample content here about this page
+                        @marylyn : Prepare input fields for contact us form
                     </p>
                 </div>
 
-                <div class="wrapper" id="sub-intro">
-                    <h3> What is this Page </h3>
-                    <p> Insert a sample content here about this page </p>
-                </div>
             </div>
 
-            <!-- End : FAQ Page Content -->
+            <!-- End : Home Page Content -->
         </div>
     </section>
     <!-- End : Section -->
